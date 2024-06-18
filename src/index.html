@@ -1,6 +1,119 @@
 @@include("_head.html", {"id":"home"}) 
 @@include("_header.html") 
-<main class="main"> 
 
-</main> 
+<section class="about">
+	<div class="about__inner container">
+		<div class="about__social">
+			<a class="about__social-item social" href="./"><svg><use xlink:href="#icon-wapp"></use></svg></a>
+			<a class="about__social-item social" href="./"><svg><use xlink:href="#icon-tlgm"></use></svg></a>
+			<a class="about__social-item social" href="./"><svg><use xlink:href="#icon-inst"></use></svg></a>
+			<a class="about__social-item social" href="./"><svg><use xlink:href="#icon-mail"></use></svg></a>
+		</div>
+		<div class="about__logo"><svg><use xlink:href="#icon-logo"></use></svg></div>
+		<h1 class="about__text">viral videos with visual effects and CGI for your business</h1>
+	</div>
+</section>
+
+<section class="tab">
+	<div class="tab__inner container">
+		<div class="tab__buttons">
+			<button class="tab__button active">All</button>
+			<button class="tab__button">CGI</button>
+			<button class="tab__button">Video</button>
+			<button class="tab__button">VFX</button>
+		</div>
+		<div class="tab__blocks">
+			<div class="tab__block active">
+				@@include("_preview.html", { "video": 1, "title": "The Market Island", "descr": "Holding" })
+				@@include("_preview.html", { "video": 2, "title": "Art Dubai", "descr": "Airi" })
+				@@include("_preview.html", { "video": 3, "title": "Exness", "descr": "Affliate Link" })
+				@@include("_preview.html", { "video": 4, "title": "Exness", "descr": "Whales" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+				@@include("_preview.html", { "video": 6, "title": "Exness", "descr": "Tornado" })
+				@@include("_preview.html", { "video": 1, "title": "The Sandy Times", "descr": "and Karrouhat" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+				@@include("_preview.html", { "video": 1, "title": "The Market Island", "descr": "Holding" })
+				@@include("_preview.html", { "video": 2, "title": "Art Dubai", "descr": "Airi" })
+				@@include("_preview.html", { "video": 3, "title": "Exness", "descr": "Affliate Link" })
+				@@include("_preview.html", { "video": 4, "title": "Exness", "descr": "Whales" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+				@@include("_preview.html", { "video": 6, "title": "Exness", "descr": "Tornado" })
+				@@include("_preview.html", { "video": 1, "title": "The Sandy Times", "descr": "and Karrouhat" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+			</div>
+			<div class="tab__block">
+				@@include("_preview.html", { "video": 4, "title": "Exness", "descr": "Whales" })
+				@@include("_preview.html", { "video": 1, "title": "The Market Island", "descr": "Holding" })
+				@@include("_preview.html", { "video": 6, "title": "Exness", "descr": "Tornado" })
+				@@include("_preview.html", { "video": 2, "title": "Art Dubai", "descr": "Airi" })
+				@@include("_preview.html", { "video": 1, "title": "The Sandy Times", "descr": "and Karrouhat" })
+				@@include("_preview.html", { "video": 3, "title": "Exness", "descr": "Affliate Link" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+			</div>
+			<div class="tab__block">
+				@@include("_preview.html", { "video": 3, "title": "Exness", "descr": "Affliate Link" })
+				@@include("_preview.html", { "video": 4, "title": "Exness", "descr": "Whales" })
+				@@include("_preview.html", { "video": 1, "title": "The Market Island", "descr": "Holding" })
+				@@include("_preview.html", { "video": 2, "title": "Art Dubai", "descr": "Airi" })
+				@@include("_preview.html", { "video": 1, "title": "The Sandy Times", "descr": "and Karrouhat" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+				@@include("_preview.html", { "video": 6, "title": "Exness", "descr": "Tornado" })
+			</div>
+			<div class="tab__block">
+				@@include("_preview.html", { "video": 1, "title": "The Market Island", "descr": "Holding" })
+				@@include("_preview.html", { "video": 6, "title": "Exness", "descr": "Tornado" })
+				@@include("_preview.html", { "video": 5, "title": "Exness", "descr": "Phone" })
+				@@include("_preview.html", { "video": 4, "title": "Exness", "descr": "Whales" })
+				@@include("_preview.html", { "video": 3, "title": "Exness", "descr": "Affliate Link" })
+				@@include("_preview.html", { "video": 2, "title": "Art Dubai", "descr": "Airi" })
+				@@include("_preview.html", { "video": 1, "title": "The Sandy Times", "descr": "and Karrouhat" })
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="clients">
+	<div class="clients__inner container">
+		<h2 class="clients__title title">Our clients</h2>
+		<div class="clients__items">
+			<a class="clients__item" href="./"><img src="./images/clients-logo-1.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-2.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-3.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-4.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-5.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-6.webp" alt=""></a>
+			<a class="clients__item" href="./"><img src="./images/clients-logo-7.webp" alt=""></a>
+		</div>
+	</div>
+	<div class="clients__reviews container gallery">
+		<h2 class="gallery__title">Review</h2>
+		<div class="gallery__slider swiper">
+			<div class="swiper-wrapper">
+				<a href="./" class="gallery__slide swiper-slide">
+					<img src="./images/review-image-1.webp" alt="">
+				</a>
+				<a href="./" class="gallery__slide swiper-slide">
+					<img src="./images/review-image-2.webp" alt="">
+				</a>
+				<a href="./" class="gallery__slide swiper-slide">
+					<img src="./images/review-image-1.webp" alt="">
+				</a>
+				<a href="./" class="gallery__slide swiper-slide">
+					<img src="./images/review-image-3.webp" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="go">
+	<div class="go__inner container">
+		<h2 class="go__title title">Let's work</h2>
+		<div class="go__buttons">
+			<a class="go__button go__button_brief" href="./">brief us</a>
+			<a class="go__button go__button_presn" href="./">our presentation</a>
+		</div>
+	</div>
+</section>
+
 @@include("_bottom.html")
