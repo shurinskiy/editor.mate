@@ -1,24 +1,37 @@
 .clients {
 	$self: &;
+	margin-bottom: 90px;
 
 	&__inner {
 
 	}
 
 	&__title {
-
+		margin-bottom: 40px;
 	}
 
 	&__items {
-
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
 	}
 
 	&__item {
+		box-sizing: border-box;
+		text-align: center;
+		flex-grow: 1;
+		margin-bottom: 50px;
+		padding: 0 10px;
 
+		&:nth-child(-n+3) {
+			flex-grow: 1;
+			width: 30%;
+		}
 	}
 
 	&__reviews {
 
 	}
-
 }

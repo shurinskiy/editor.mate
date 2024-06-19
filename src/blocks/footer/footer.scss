@@ -22,7 +22,18 @@
 
 	&__title {
 		font-size: 40px;
+		font-weight: 300;
 		margin-bottom: 30px;
+		display: flex;
+
+		&::before {
+			content: '[ ';
+		}
+		
+		&::after {
+			content: ' ]';
+			margin-left: auto;
+		}
 	}
 
 	&__link {

@@ -1,27 +1,45 @@
 .go {
 	$self: &;
-	margin-bottom: 90px;
+	margin-bottom: 82px;
 
 	&__inner {
 
 	}
 
 	&__title {
-
+		margin-bottom: 38px;
 	}
 
 	&__buttons {
-
+		display: flex;
+		flex-flow: row wrap;
+		max-width: 680px;
 	}
 
 	&__button {
-
+		display: block;
+		box-sizing: border-box;
+		text-decoration: none;
+		text-align: center;
+		width: fit-content;
+		font-size: 55px;
+		color: #000;
+		line-height: 1.15;
+		padding-right: 50px;
+		border-radius: 15px;
+		margin-bottom: 15px;
+		padding-left: 50px;
+		
 		&_brief {
-			
+			background: linear-gradient(130deg, rgba(227,234,67,1) 0%, rgba(255,0,72,1) 100%);
+			padding-bottom: 3px;
+			padding-top: 3px;
+			color: #fff;			
 		}
-
+		
 		&_presn {
-			
+			border: 3px solid #000;
+			margin-left: auto;
 		}
 	}
 }
