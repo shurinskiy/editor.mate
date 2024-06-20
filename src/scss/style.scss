@@ -48,7 +48,7 @@ $breakpoints: (
 	--gap: 16px;
 	
 	@include media('<=xs') {
-		--gap: 10px;
+		// --gap: 10px;
 	}
 }
 

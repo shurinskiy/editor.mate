@@ -1,12 +1,24 @@
 .social {
 	$self: &;
+	box-sizing: border-box;
 	display: block;
 	width: 78px;
 	height: 78px;
-	box-sizing: border-box;
 	padding: 17px;
+	flex-shrink: 0;
 	background: linear-gradient(110deg, rgba(227,234,67,1) 0%, rgba(255,0,72,1) 100%);
 	border-radius: 1000px;
+	
+	@include media('<=xxs') {
+		width: 70px;
+		height: 70px;
+	}
+	
+	@include media('<=xxxs') {
+		padding: 14px;
+		width: 60px;
+		height: 60px;
+	}
 
 	svg {
 		display: block;

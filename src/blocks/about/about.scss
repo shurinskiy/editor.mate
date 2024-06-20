@@ -2,9 +2,24 @@
 	$self: &;
 	padding-top: 30px;
 	margin-bottom: 95px;
+	
+	@include media('<=lg') {
+		padding-top: 80px;
+	}
+	
+	@include media('<=xxs') {
+		padding-top: 60px;
+		margin-bottom: 50px;
+	}
 
 	&__inner {
-		padding-left: 65px;
+		display: flex;
+		flex-flow: column nowrap;
+		padding-left: 70px;
+
+		@include media('<=lg') {
+			padding: 0;
+		}
 	}
 
 	&__social {
@@ -12,6 +27,15 @@
 		justify-content: space-between;
 		max-width: 390px;
 		margin-left: auto;
+		
+		@include media('<=md') {
+			margin: 0;
+			order: 1;
+		}
+		
+		@include media('<=xxs') {
+			max-width: 390px;
+		}
 
 		&-item {
 			margin: 0 5px;
@@ -19,14 +43,28 @@
 	}
 
 	&__logo {
-		width: 100%;
-		max-width: 610px;
+		display: block;
+		box-sizing: border-box;
+		max-width: 580px;
+		height: 150px;
 		margin: -10px 0 20px;
+		// @include outline();
+		
+		@include media('<=xs') {
+			margin: -10px 0 10px;
+			max-width: 430px;
+			height: 110px;
+		}
+		
+		@include media('<=xxs') {
+			margin: -10px 0 0;
+			max-width: 275px;
+			height: 75px;
+		}
 
 		svg {
 			display: block;
 			width: 100%;
-			max-width: 100%;
 			max-height: 100%;
 		}
 	}
@@ -34,6 +72,22 @@
 	&__text {
 		font-size: 40px;
 		font-weight: 300;
-		padding-left: 38px;
+		padding-left: 35px;
+		
+		@include media('<=lg') {
+			padding-left: 20px;
+			margin-bottom: 30px;
+		}
+		
+		@include media('<=xs') {
+			margin-bottom: 25px;
+			padding-left: 15px;
+			font-size: 28px;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
 	}
 }

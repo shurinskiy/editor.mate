@@ -14,11 +14,20 @@
 		display: flex;
 		flex-flow: row wrap;
 		max-width: 680px;
+
+		@include media('<=sm') {
+			max-width: none;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 26px;
+		}
 	}
 
 	&__button {
-		display: block;
+		display: flex;
+		align-items: center;
 		box-sizing: border-box;
+		justify-content: center;
 		text-decoration: none;
 		text-align: center;
 		width: fit-content;
@@ -29,17 +38,47 @@
 		border-radius: 15px;
 		margin-bottom: 15px;
 		padding-left: 50px;
+		grid-column: span 1;
 		
+		@include media('<=md') {
+			font-size: 45px;
+		}
+		
+		@include media('<=sm') {
+			padding: 0;
+			width: auto;
+			margin: 0;
+		}
+		
+		@include media('<=xs') {
+			font-size: 30px;
+			min-height: 50px;
+		}
+		
+		@include media('<=xxxs') {
+			border-radius: 10px;
+			min-height: 40px;
+			font-size: 20px;
+		}
+				
 		&_brief {
+			margin-right: auto;
 			background: linear-gradient(130deg, rgba(227,234,67,1) 0%, rgba(255,0,72,1) 100%);
 			padding-bottom: 3px;
 			padding-top: 3px;
 			color: #fff;			
-			margin-right: auto;
+		
+			@include media('<=sm') {
+				margin: 0;
+			}
 		}
 		
 		&_presn {
 			border: 3px solid #000;
+		
+			@include media('<=xxxs') {
+				border-width: 2px;
+			}
 		}
 	}
 }

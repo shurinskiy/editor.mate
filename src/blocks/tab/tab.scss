@@ -1,6 +1,10 @@
 .tab {
 	$self: &;
 	margin-bottom: 90px;
+	
+	@include media('<=sm') {
+		margin-bottom: 50px;
+	}
 
 	&__inner {
 
@@ -12,6 +16,18 @@
 		justify-content: space-between;
 		max-width: 600px;
 		margin-left: 95px;
+		
+		@include media('<=md') {
+			margin-left: 0px;
+		}
+		
+		@include media('<=sm') {
+			max-width: none;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__button {
@@ -22,6 +38,18 @@
 		text-transform: uppercase;
 		transition: color 0.3s;
 		margin: 0 10px;
+		
+		@include media('<=sm') {
+			font-size: 50px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 40px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 30px;
+		}
 
 		&.active {
 			color: #000;
@@ -41,6 +69,18 @@
 		display: none;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 26px;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxxs') {
+			gap: 16px;
+		}
 
 		&.active {
 			display: grid;
@@ -78,6 +118,14 @@
 			font-size: 35px;
 			background-color: rgba(0, 0, 0, 0.2);
 			
+			@include media('<=xxs') {
+				font-size: 30px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 24px;
+			}
+					
 			&:hover {
 				transition: background-color 0.3s;
 				background-color: rgba(0, 0, 0, 0);
