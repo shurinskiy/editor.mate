@@ -1,0 +1,32 @@
+@@if(this.parent) { <div class="@@parent gallery container"> }
+@@if(!this.parent) { <section class="gallery container"> }
+	<h2 class="gallery__title">@@title</h2>
+	<div class="gallery__slider swiper">
+		<div class="swiper-wrapper">
+			@@if(this.slides) {
+				@@for (let i = 0; i < slides.length; i++) {
+					@@if(!slides[0].name) {
+						<a href="./" class="gallery__slide swiper-slide">
+							<img src="./images/`+slides[i]+`" alt="">
+						</a>
+					}
+					@@if(slides[0].name) {
+						<a href="./" class="gallery__slide swiper-slide">
+							<img src="./images/`+slides[i].url+`" alt="">
+							<h3>`+slides[i].name+`</h3>
+						</a>
+					}
+				}
+			}
+		</div>
+		<div class="gallery__navi">
+			<button class="gallery__button gallery__button_prev">
+				<svg><use xlink:href="#icon-left"></use></svg>
+			</button>
+			<button class="gallery__button gallery__button_next">
+				<svg><use xlink:href="#icon-right"></use></svg>
+			</button>
+		</div>
+	</div>
+@@if(this.parent) { </div> }
+@@if(!this.parent) { </section> }

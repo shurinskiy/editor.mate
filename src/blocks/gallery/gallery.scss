@@ -1,12 +1,14 @@
 .gallery {
 	$self: &;
-	border-top: 3px solid #000;
+	border-top: 3px solid rgb(var(--color));
 	padding-top: 14px;
+	margin-bottom: 90px;
 
 	&__title {
 		font-weight: 500;
 		margin-bottom: 35px;
 		display: flex;
+		color: rgb(var(--color));
 		font-size: 40px;
 		@include range(40px, 30px, 1280px, 480px);
 
@@ -38,9 +40,30 @@
 		display: block;
 		overflow: hidden;
 		border-radius: 12px;
+		text-decoration: none;
+		position: relative;
+		color: #fff;
 
 		img {
 			display: block;
+		}
+
+		h3 {
+			display: flex;
+			position: absolute;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			z-index: 1;
+			inset: 0px;
+			font-size: 40px;
+			text-transform: uppercase;
+			background-color: rgba(0, 0, 0, 0.3);
+			transition: background-color 0.3s;
+			
+			&:hover {
+				background-color: rgba(0, 0, 0, 0);
+			}
 		}
 	}
 
@@ -56,30 +79,42 @@
 		top: 50%;
 		width: 46px;
 		height: 46px;
-		background-color: #000;
+		overflow: hidden;
+		background-color: #808080;
 		border-radius: 1000px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: background-color 0.3s;
+		
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			inset: 0px;
+			background: linear-gradient(120deg, #e2eb42, #ff0048);
+			transition: opacity 0.3s;
+			z-index: 1;
+		}
 		
 		@include media('<=xs') {
 			width: 36px;
 			height: 36px;
 		}
-			
+		
 		@include media('<=xxs') {
 			display: none;
 		}
-
-		&:disabled {
-			background-color: #808080;
+		
+		&:disabled::before {
+			opacity: 0;
 		}
-
+		
 		svg {
 			width: 13px;
 			height: 22px;
 			fill: #fff;
+			position: relative;
+			z-index: 2;
 			
 			@include media('<=xs') {
 				width: 11px;

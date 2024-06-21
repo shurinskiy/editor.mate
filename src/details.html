@@ -1,0 +1,71 @@
+@@include("_head.html", {"theme":"dark"})
+@@include("_header.html")
+
+<section class="detail detail-js">
+	<div class="detail__inner container">
+		<a class="detail__back" href="./">Back to all</a>
+		<div class="detail__body">
+			<div class="detail__video">
+				<div class="detail__preview">
+					<video src="./images/video-preview-5.mp4" poster="./images/video-poster-5.webp" muted="muted" loop playsinline></video>
+				</div>
+			</div>
+			<div class="detail__side">
+				<h1 class="detail__title">Art Dubai Airi</h1>
+				<div class="detail__text">
+					<p>A series of full CG video clips for a virtual influencer, which were combined into a single film presentation showcased at Art Dubai 2024.
+					The project was completed in record time - just 1 month. The total runtime of the video was 3 minutes, including scene development, animation, rendering, color correction, and visual effects.</p>
+					<br>
+					<p>The work with the brand included:</p>
+					<ul>
+						<li>Location scouting</li>
+						<li>Creative development and Art direction</li>
+						<li>CGI team directing, VFX, color grading, and sound design.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_gallery.html", {
+	"title": "Other",
+	"slides": [
+		{"url":"other-image-1.webp", "name": "Couple"},
+		{"url":"other-image-2.webp", "name": "Karrouhat"},
+		{"url":"other-image-4.webp", "name": "Exness"},
+		{"url":"other-image-3.webp", "name": "Yango"}
+	]
+})
+
+@@include("_gallery.html", {
+	"title": "Process",
+	"slides": [
+		"process-image-1.webp",
+		"process-image-2.webp",
+		"process-image-3.webp",
+		"process-image-1.webp",
+	]
+})
+
+@@include("_gallery.html", {
+	"title": "Review",
+	"slides": [
+		"review-image-1.webp",
+		"review-image-2.webp",
+		"review-image-3.webp",
+		"review-image-1.webp",
+	]
+})
+
+<section class="go">
+	<div class="go__inner container">
+		<h2 class="go__title title">Let's work</h2>
+		<div class="go__buttons">
+			<a class="go__button go__button_brief" href="./">brief us</a>
+			<a class="go__button go__button_presn" href="./">our presentation</a>
+		</div>
+	</div>
+</section>
+
+@@include("_bottom.html")

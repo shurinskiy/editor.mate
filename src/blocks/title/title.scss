@@ -1,5 +1,6 @@
 .title {
 	$self: &;
+	color: rgb(var(--color));
 	font-size: 110px;
 	@include range(110px, 60px, 1280px, 480px);
 }

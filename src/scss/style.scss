@@ -45,10 +45,17 @@ $breakpoints: (
 :root {
 	--size: #{$basesize}px;
 	--container: 1200px;
+	--bgcolor: 250, 250, 250;
+	--color: 17, 17, 17;
 	--gap: 16px;
 	
 	@include media('<=xs') {
-		// --gap: 10px;
+		--gap: 10px;
+	}
+
+	&[data-theme="dark"] {
+		--bgcolor: 17, 17, 17;
+		--color: 255, 255, 255;
 	}
 }
 
@@ -57,7 +64,8 @@ body, html {
 	// scrollbar-gutter: stable;
 	// scroll-behavior: smooth;	
 	box-sizing: border-box;
-	background-color: #fafafa;
+	background-color: rgb(var(--bgcolor));
+	color: rgb(var(--color));
 	font-size: var(--size);
 	font-family: "TS", sans-serif;
 	line-height: 1.2;
@@ -68,7 +76,7 @@ body, html {
 }
 
 body {
-	padding-top: 100px;
+	padding-top: 103px;
 }
 
 .footer { 

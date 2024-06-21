@@ -32,7 +32,8 @@
 		text-align: center;
 		width: fit-content;
 		font-size: 55px;
-		color: #000;
+		font-weight: 400;
+		color: rgb(var(--color));
 		line-height: 1.15;
 		padding-right: 50px;
 		border-radius: 15px;
@@ -66,7 +67,7 @@
 			background: linear-gradient(130deg, rgba(227,234,67,1) 0%, rgba(255,0,72,1) 100%);
 			padding-bottom: 3px;
 			padding-top: 3px;
-			color: #fff;			
+			color: #fff;
 		
 			@include media('<=sm') {
 				margin: 0;
@@ -74,7 +75,7 @@
 		}
 		
 		&_presn {
-			border: 3px solid #000;
+			border: 3px solid rgb(var(--color));
 		
 			@include media('<=xxxs') {
 				border-width: 2px;
