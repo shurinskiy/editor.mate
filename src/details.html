@@ -6,9 +6,9 @@
 		<a class="detail__back" href="./">Back to all</a>
 		<div class="detail__body">
 			<div class="detail__video">
-				<div class="detail__preview">
-					<video src="./images/video-preview-5.mp4" poster="./images/video-poster-5.webp" muted="muted" loop playsinline></video>
-				</div>
+				<a class="detail__preview" href="./images/video-preview-5.mp4" data-fancybox>
+					<img src="./images/detail-poster.webp" alt="">
+				</a>
 			</div>
 			<div class="detail__side">
 				<h1 class="detail__title">Art Dubai Airi</h1>
@@ -39,22 +39,24 @@
 })
 
 @@include("_gallery.html", {
+	"fancybox": "process",
 	"title": "Process",
 	"slides": [
-		"process-image-1.webp",
-		"process-image-2.webp",
-		"process-image-3.webp",
-		"process-image-1.webp",
+		{"url":"process-image-1.webp", "href":"process-image-1-large.webp"},
+		{"url":"process-image-2.webp", "href":"process-image-2-large.webp"},
+		{"url":"process-image-3.webp", "href":"process-image-3-large.webp"},
+		{"url":"process-image-1.webp", "href":"process-image-1-large.webp"}
 	]
 })
 
 @@include("_gallery.html", {
+	"fancybox": "reviews",
 	"title": "Review",
 	"slides": [
-		"review-image-1.webp",
-		"review-image-2.webp",
-		"review-image-3.webp",
-		"review-image-1.webp",
+		{"url":"review-image-1.webp", "href":"review-image-1-large.webp"},
+		{"url":"review-image-2.webp", "href":"review-image-2-large.webp"},
+		{"url":"review-image-3.webp", "href":"review-image-3-large.webp"},
+		{"url":"review-image-1.webp", "href":"review-image-1-large.webp"}
 	]
 })
 

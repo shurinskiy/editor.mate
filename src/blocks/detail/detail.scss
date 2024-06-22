@@ -51,10 +51,25 @@
 	&__preview {
 		border-radius: 12px;
 		overflow: hidden;
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			z-index: 1;
+			inset: 0px;
+			background: url('#{$images-path}play.svg') center / auto no-repeat rgba(0, 0, 0, 0.4);
+			transition: background-color 0.3s;
+		}
 		
-		video {
+		video, img {
 			display: block;
 			max-width: 100%;
+		}
+
+		&:hover::after {
+			background-color: rgba(0, 0, 0, 0);
 		}
 	}
 

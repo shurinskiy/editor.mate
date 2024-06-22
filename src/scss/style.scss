@@ -8,7 +8,7 @@
 }
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -38,6 +38,7 @@ $breakpoints: (
 // @include font-face("Montserrat-Thin", "MR", 100);
 
 @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
@@ -95,4 +96,9 @@ em { font-style: italic; }
 @keyframes showItem {
 	from { opacity: 0; }
 	to { opacity: 1; }
+}
+
+.has-html5video .fancybox__content {
+	width: auto;
+	height: auto;
 }

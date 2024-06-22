@@ -5,17 +5,14 @@
 		<div class="swiper-wrapper">
 			@@if(this.slides) {
 				@@for (let i = 0; i < slides.length; i++) {
-					@@if(!slides[0].name) {
-						<a href="./" class="gallery__slide swiper-slide">
-							<img src="./images/`+slides[i]+`" alt="">
-						</a>
-					}
-					@@if(slides[0].name) {
-						<a href="./" class="gallery__slide swiper-slide">
-							<img src="./images/`+slides[i].url+`" alt="">
-							<h3>`+slides[i].name+`</h3>
-						</a>
-					}
+					<a 
+						href="`+((slides[i].href)?('./images/'+slides[i].href):'./')+`" 
+						class="gallery__slide swiper-slide" 
+						`+((typeof this.fancybox !=='undefined')?('data-fancybox='+this.fancybox):'')+` 
+					>
+						<img src="./images/`+slides[i].url+`" alt="">
+						`+((slides[i].name)?('<h3>'+slides[i].name+'</h3>'):'')+`
+					</a>
 				}
 			}
 		</div>
