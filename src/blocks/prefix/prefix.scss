@@ -1,0 +1,121 @@
+.prefix {
+	$self: &;
+	position: relative;
+	display: flex;
+
+	&_opened {
+		#{$self}__bottom {
+			display: block;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		input[type='tel'] {
+			@extend %reset-input;
+			color: rgb(var(--color));
+			flex-grow: 1;
+			height: 100%;
+			font-weight: 500;
+			font-size: 30px;
+		}
+	}
+	
+	&__button {
+		@extend %reset-button;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin-right: 30px;
+		font-size: 45px;
+	}
+
+	&__icon {
+
+	}
+
+	&__bottom {
+		box-sizing: border-box;
+		display: none;
+		position: absolute;
+		left: -3px;
+		top: calc(100% - 10px);
+		width: calc(100% + 6px);
+		background-color: rgb(var(--bgcolor));
+		border: 3px solid rgb(var(--color));
+		border-radius: 0 0 15px 15px;
+		border-top: none;
+		padding: 20px 18px;
+	}
+
+	&__search {
+		@extend %reset-input;
+		background: url('#{$images-path}zoom.svg') center right 10px / 24px 24px no-repeat rgb(var(--color));
+		color: rgb(var(--bgcolor));
+		padding: 10px 40px 10px 10px;
+		width: 100%;
+		margin-bottom: 20px;
+		animation: showItem 0.4s linear;
+	}
+
+	&__options {
+		overflow: auto;
+		max-height: 230px;
+		animation: showItem 0.4s linear;
+	
+		&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+		
+		&::-webkit-scrollbar-track {
+			background-color: #222;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: #888;
+			border-radius: 10px;
+		}
+		
+		&::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}
+	}
+
+	&__option {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		padding-right: 10px;
+		font-weight: 300;
+		font-size: 26px;
+		
+		&:not(:last-child) {
+			margin: 0 0 20px;
+		}
+
+		&::before {
+			font-size: 30px;
+			margin-right: 18px;
+		}
+
+		&_current {
+			display: none;
+		}
+
+		&_hidden {
+			display: none;
+		}
+
+		&-name {
+
+		}
+
+		&-phone {
+			margin-left: auto;
+		}
+	}
+}

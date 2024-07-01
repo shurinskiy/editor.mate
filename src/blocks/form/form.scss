@@ -1,0 +1,119 @@
+.form {
+	$self: &;
+		
+	input[type='checkbox'] {
+		@extend %reset-input;
+		box-sizing: border-box;
+		display: inline-flex;
+		vertical-align: middle;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid rgb(var(--color));
+		border-radius: 15px;
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		
+		&:checked::before {
+			display: block;
+			content: '';
+			width: 24px;
+			height: 16px;
+			background: url('#{$images-path}check.svg') center / contain no-repeat transparent;
+			animation: showItem 0.1s linear;
+		}
+	}
+
+	legend {
+		color: rgb(var(--color));
+		font-weight: 500;
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	fieldset {
+		display: block;
+		box-sizing: border-box;
+		border: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 50px;
+	}
+
+	&__field {
+		@extend %reset-input;
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		border: 3px solid rgb(var(--color));
+		color: rgb(var(--color));
+		border-radius: 15px;
+		padding: 10px 18px;
+		font-weight: 500;
+		font-size: 30px;
+		min-height: 80px;
+		
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&::placeholder {
+			color: #7F7F7F;
+		}
+	}
+
+	&__check {
+		display: flex;
+		align-items: center;
+		font-size: 35px;
+		font-weight: 300;
+		line-height: 0.9;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		input[type='checkbox'] {
+			margin-right: 55px;
+		}
+	}
+
+	&__agree {
+		display: block;
+		margin-bottom: 50px;
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 0.9;
+		
+		input[type='checkbox'] {
+			margin-right: 30px;
+		}
+	}
+	
+	&__select {
+		
+	}
+	
+	&__area {
+		@extend %reset-input;
+		min-height: 160px;
+		resize: none;
+		font-weight: 300;
+		line-height: 1.0;
+	}
+
+	&__submit {
+		@extend %reset-button;
+		font-size: 30px;
+		font-family: "TS", sans-serif;
+		color: #fff;
+		display: block;
+		width: 100%;
+		text-align: center;
+		background: linear-gradient(130deg, rgba(227,234,67,1) 0%, rgba(255,0,72,1) 100%);
+		border-radius: 15px;
+		line-height: 1.2;
+		font-size: 55px;
+		padding-top: 4px;
+	}
+}

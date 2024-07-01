@@ -7,8 +7,9 @@
 	z-index: 10;
 	width: 100%;
 	border-bottom: 3px solid transparent;
-	// transition: border-bottom 0.2s ease-in;
+	padding-right: var(--fancybox-scrollbar-compensate, 0px);
 	transition: background-color 0.2s linear;
+	// transition: border-bottom 0.2s ease-in;
 
 	&.scrolled {
 		// border-color: rgb(var(--color));

@@ -37,8 +37,19 @@
 			max-width: 390px;
 		}
 
-		&-item {
+		&-item.social {
 			margin: 0 5px;
+				
+			@include media('<=xxs') {
+				width: 70px;
+				height: 70px;
+			}
+			
+			@include media('<=xxxs') {
+				padding: 14px;
+				width: 60px;
+				height: 60px;
+			}
 		}
 	}
 
