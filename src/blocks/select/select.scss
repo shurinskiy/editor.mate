@@ -5,6 +5,7 @@
 	position: relative;
 	box-sizing: border-box;
 	font-size: 30px;
+	@include range(30px, 25px, 1280px, 480px);
 
 	&_opened {
 		
@@ -36,10 +37,8 @@
 			top: calc(50% - 12px);
 			transition: transform 0.1s linear;
 			
-			@include media('<=xxs') {
-				// top: calc(50% - 9px);
-				// height: 18px;
-				// width: 18px;
+			@include media('<=sm') {
+				right: 20px;
 			}
 		}
 	}

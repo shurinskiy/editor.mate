@@ -2,22 +2,41 @@
 	$self: &;
 	padding-top: 100px;
 
+	@include media('<=sm') {
+		padding-top: 0;
+	}
+
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 26px;
+
+		@include media('<=sm') {
+			display: flex;
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__side {
 		margin-bottom: 50px;
+
+		@include media('<=sm') {
+			order: 1;
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__title {
-		font-weight: 500;
-		font-size: 110px;
 		width: fit-content;
 		margin-bottom: 30px;
+		font-weight: 500;
+		font-size: 110px;
+		@include range(110px, 60px, 1280px, 480px);
 		
+		@include media('<=sm') {
+			margin-bottom: 10px;
+		}
+
 		&_gradient {
 			background: linear-gradient(130deg, #E3EA43 0%, #FF0048 100%);
 			-webkit-background-clip: text;
@@ -28,29 +47,55 @@
 	}
 
 	&__text {
-		font-size: 40px;
 		font-weight: 500;
 		line-height: 1.5;
 		margin-bottom: 20px;
+		font-size: 40px;
+		@include range(40px, 35px, 1280px, 480px);
+		
+		@include media('<=sm') {
+			padding-top: 20px;
+			margin-bottom: 40px;
+		}
 	}
 	
 	&__social {
-		// display: flex;
-		// flex-flow: row wrap;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 60px 26px;
 		max-width: 350px;
 		
+		@include media('<=sm') {
+			display: flex;
+			flex-flow: row wrap;
+			max-width: none;
+			grid-gap: 0;
+		}
+		
 		&-item.social {
 			width: 130px;
 			height: 130px;
 			padding: 27px;
+			@include range(130px, 70px, 1280px, 480px, 'height');
+			@include range(130px, 70px, 1280px, 480px, 'width');
+			@include range(27px, 15px, 1280px, 480px, 'padding');
+		
+			@include media('<=sm') {
+				margin-bottom: 30px;
+
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+			}
 		}
 	}
 
 	&__brief {
 		margin-bottom: 80px;
+		
+		@include media('<=sm') {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__form {

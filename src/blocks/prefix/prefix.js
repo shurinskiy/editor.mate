@@ -44,7 +44,7 @@ import countries from './countries.json';
 	
 			_button.addEventListener('click', () => {
 				_wrapper.classList.toggle(`${props.name}_opened`);
-				_search.focus();
+				// _search.focus();
 			});
 	
 			_search.addEventListener('input', (e) => {

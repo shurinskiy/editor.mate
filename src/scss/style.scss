@@ -51,7 +51,7 @@ $breakpoints: (
 	--gap: 16px;
 	
 	@include media('<=xs') {
-		--gap: 10px;
+		--gap: 20px;
 	}
 
 	&[data-theme="dark"] {

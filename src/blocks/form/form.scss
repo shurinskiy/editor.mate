@@ -11,14 +11,18 @@
 		border: 3px solid rgb(var(--color));
 		border-radius: 15px;
 		cursor: pointer;
+		flex-shrink: 0;
 		width: 40px;
 		height: 40px;
+		@include range(40px, 30px, 1280px, 480px, 'width');
+		@include range(40px, 30px, 1280px, 480px, 'height');
+		@include range(15px, 10px, 1280px, 480px, 'border-radius');
 		
 		&:checked::before {
 			display: block;
 			content: '';
-			width: 24px;
-			height: 16px;
+			width: 65%;
+			height: 50%;
 			background: url('#{$images-path}check.svg') center / contain no-repeat transparent;
 			animation: showItem 0.1s linear;
 		}
@@ -26,9 +30,9 @@
 
 	legend {
 		color: rgb(var(--color));
+		margin-bottom: 20px;
 		font-weight: 500;
 		font-size: 40px;
-		margin-bottom: 20px;
 	}
 
 	fieldset {
@@ -50,9 +54,10 @@
 		border-radius: 15px;
 		padding: 10px 18px;
 		font-weight: 500;
-		font-size: 30px;
 		min-height: 80px;
-		
+		font-size: 30px;
+		@include range(30px, 25px, 1280px, 480px);
+			
 		&:not(:last-child) {
 			margin-bottom: 20px;
 		}
@@ -65,21 +70,27 @@
 	&__check {
 		display: flex;
 		align-items: center;
-		font-size: 35px;
 		font-weight: 300;
 		line-height: 0.9;
-
+		font-size: 35px;
+		@include range(35px, 25px, 1280px, 480px);
+		
 		&:not(:last-child) {
 			margin-bottom: 30px;
 		}
-
+		
 		input[type='checkbox'] {
 			margin-right: 55px;
+			
+			@include media('<=sm') {
+				margin-right: 22px;
+			}
 		}
 	}
 
 	&__agree {
-		display: block;
+		display: flex;
+		align-items: center;
 		margin-bottom: 50px;
 		font-size: 30px;
 		font-weight: 300;
