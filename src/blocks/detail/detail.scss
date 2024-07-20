@@ -85,10 +85,21 @@
 		font-size: 40px;
 		font-weight: 500;
 		text-transform: uppercase;
-		margin-bottom: 60px;
+		margin-bottom: 18px;
 		
 		@include media('<=xs') {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: 300;
+		font-size: 35px;
+		margin-bottom: 20px;
+		
+		@include media('<=xs') {
+			font-size: 30px;
+			margin-bottom: 16px;
 		}
 	}
 

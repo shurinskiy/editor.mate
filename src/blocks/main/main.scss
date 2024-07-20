@@ -1,0 +1,43 @@
+.main {
+	$self: &;
+	font-family: sans-serif;
+	font-size: 18px;
+	padding: 40px 0;
+
+	@include media('<=xxxs') {
+		font-size: 16px;
+	}
+
+	h1, h2, h3 {
+		font-family: "TS", sans-serif;
+		font-weight: 500;
+	}
+
+	h1 {
+		font-size: 110px;
+		@include range(110px, 60px, 1280px, 480px);
+	}
+
+	h2 {
+		font-size: 44px;
+		@include range(44px, 34px, 1280px, 480px);
+	}
+	
+	ul > li {
+		margin: 10px 0;
+	
+		&::before {
+			display: inline-block;
+			content: '\2022';
+			margin-right: 8px;
+		}
+
+		ul li {
+			padding-left: 30px;
+			
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
