@@ -1,5 +1,5 @@
 [
-	{ "name": "Thailand", "code": "TH", "phone": 66 },
+	{ "name": "Cyprus", "code": "CY", "phone": 357 },
 	{ "name": "Albania", "code": "AL", "phone": 355 },
 	{ "name": "Algeria", "code": "DZ", "phone": 213 },
 	{ "name": "Andorra", "code": "AD", "phone": 376 },
@@ -15,7 +15,6 @@
 	{ "name": "Canada", "code": "CA", "phone": 1 },
 	{ "name": "China", "code": "CN", "phone": 86 },
 	{ "name": "Croatia", "code": "HR", "phone": 385 },
-	{ "name": "Cyprus", "code": "CY", "phone": 357 },
 	{ "name": "Czech Republic", "code": "CZ", "phone": 420 },
 	{ "name": "Denmark", "code": "DK", "phone": 45 },
 	{ "name": "Ecuador", "code": "EC", "phone": 593 },
@@ -96,6 +95,7 @@
 	{ "name": "Switzerland", "code": "CH", "phone": 41 },
 	{ "name": "Syrian Arab Republic", "code": "SY", "phone": 963 },
 	{ "name": "Tajikistan", "code": "TJ", "phone": 992 },
+	{ "name": "Thailand", "code": "TH", "phone": 66 },
 	{ "name": "Tunisia", "code": "TN", "phone": 216 },
 	{ "name": "Turkey", "code": "TR", "phone": 90 },
 	{ "name": "Turkmenistan", "code": "TM", "phone": 7370 },

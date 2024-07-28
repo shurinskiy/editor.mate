@@ -87,6 +87,14 @@
 					margin-right: 30px;
 				}
 			}
+		
+			@include media('<=xxs') {
+				margin-bottom: 20px;
+
+				&:not(:last-child) {
+					margin-right: 20px;
+				}
+			}
 		}
 	}
 

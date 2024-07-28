@@ -44,6 +44,15 @@
 		margin-bottom: 50px;
 	}
 
+	a {
+		text-decoration: none;
+		color: #ff9b00;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 	&__field {
 		@extend %reset-input;
 		box-sizing: border-box;
@@ -98,7 +107,7 @@
 		margin-bottom: 25px;
 		font-size: 30px;
 		font-weight: 300;
-		line-height: 0.9;
+		line-height: 1.0;
 		
 		input[type='checkbox'] {
 			margin-right: 30px;
